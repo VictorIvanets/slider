@@ -77,19 +77,22 @@ document.querySelector(".container__slider__prev").addEventListener('click', ()=
 
 
 
+
 document.querySelector(".container__slider__line").addEventListener('click', (e)=>{
   const videolink = e.target.alt
   addPopUp.innerHTML = ("")
   addPopUp.insertAdjacentHTML("beforeend",
   ` 
 <div class="sliderbox__container">
-      <iframe class="sliderbox__videoup" id="slider" src=${videolink} width="640" height="360" allow="" allowfullscreen frameborder="0"></iframe>
+      <iframe class="sliderbox__videoup" id="slider" src=${videolink} width="640" height="360" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>
 </div>
   `
   )
 })
 
-document.querySelector(".close").addEventListener('click', ()=>{
+
+document.addEventListener("keydown", (ev)=>{
+  ev.key == "Escape"
   addPopUp.innerHTML = ("")
-})
+  });
 

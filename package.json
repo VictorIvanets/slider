@@ -1,5 +1,12 @@
 {
+  "homepage": "https://VictorIvanets.github.io/slider",
   "dependencies": {
     "vimeo": "^2.3.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d build"
   }
 }
